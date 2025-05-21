@@ -10,7 +10,7 @@ SHOW_GAME = False  # Set to False if you don't want game rendering
 # Initialize game and agent
 game = Game(WIDTH, HEIGHT)
 agent = QLearningAgent(WIDTH, HEIGHT,alpha=0.5, gamma=0.98, epsilon=0.2)
-agent.load_q_table()
+agent.load_q_table1()
 
 # Stats
 success_streak = 0
@@ -46,6 +46,6 @@ for episode in range(1, EPISODES + 1):
         print("Harry escaped successfully 10 times in a row!")
         break
 
-agent.save_q_table()
+agent.save_q_table1()
 
 pygame.quit()
